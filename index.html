@@ -24,9 +24,10 @@
             </div>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item layui-hide layui-show-md-inline-block">
-                    <a href="javascript:;">
-                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
-                        class="layui-nav-img" />
+                    <!-- 右侧导航栏上面头像 -->
+                    <a href="javascript:;" class="userinfo">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+                        <span class="text-avatar">A</span>
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
@@ -40,13 +41,23 @@
                 </li>
             </ul>
         </div>
-        
+
         <!--!侧边栏区域  -->
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <!-- 左侧侧边栏上面头像 -->
+                <div class="userinfo">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+                    <span class="text-avatar">A</span>
+                    <span id="welcome">欢迎 ***</span>
+                </div>
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all">
-                    <li class="layui-nav-item"><a href=""><span class="iconfont icon-home"></span>首页</a></li>
+                    <!-- 为 首页 对应的导航 Item 项添加默认高亮效果， layui-this 属性-->
+                    <li class="layui-nav-item layui-this">
+                        <!-- 为 首页 链接添加 href 和 target 属性 -->
+                        <a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a>
+                    </li>
                     <li class="layui-nav-item">
                         <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
                         <dl class="layui-nav-child">
@@ -66,14 +77,13 @@
                 </ul>
             </div>
         </div>
-<!--!内容主体区域  -->
+        <!--!内容主体区域  -->
         <div class="layui-body">
-            <!-- 内容主体区域 -->
-            <div style="padding: 15px">
-                内容主体区域。记得修改 layui.css 和 js 的路径
-            </div>
+            <!-- 内容主体区域    -->
+            <!-- 指定默认 iframe 页面，添加 src 的属性即可 -->
+            <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
         </div>
-<!--! 底部固定区域 -->
+        <!--! 底部固定区域 -->
         <div class="layui-footer">
             <!-- 底部固定区域 -->
             底部固定区域
