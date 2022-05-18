@@ -39,4 +39,18 @@ body {
     justify-content: flex-end;
     font-size: 12px;
   }
+/* 美化登录框密码框 */
+.layui-form-item {
+    position: relative;
+  }
+  /* 给小图标加子绝父相 */
+  .layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  /* 给Input加个padding值，让placeholder往右挤 */
+  .layui-input {
+    padding-left: 32px;
+  }
 /* -----------登录注册区域------------ */
