@@ -1,4 +1,4 @@
-/* -----------body------------ */
+/*! -----------body------------ */
 html,
 body {
   margin: 0;
@@ -7,9 +7,9 @@ body {
   height: 100%;
   background: url(/assets/images/login_bg.jpg) no-repeat center center/cover;
 }
-/* -----------body------------ */
+/*! -----------body------------ */
 
-/* -----------登录注册区域------------ */
+/*! -----------登录注册区域------------ */
 .loginAndRegBox {
   width: 400px;
   height: 310px;
@@ -53,4 +53,4 @@ body {
   .layui-input {
     padding-left: 32px;
   }
-/* -----------登录注册区域------------ */
+/*! -----------登录注册区域------------ */
