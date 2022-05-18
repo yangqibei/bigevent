@@ -12,7 +12,7 @@ $(function () {
   });
 });
 
-//! 表单的验证逻辑 
+//! 表单的验证模块
 // 从 LayUI 中获取 form 对象
 const form = layui.form;
 
@@ -30,3 +30,28 @@ form.verify({
         if(pwd !== val) return "两次密码不一致"
     },
 });
+
+//!账号的注册模块
+ // 获取 layui 弹窗
+ const layer = layui.layer;
+ // 设置请求根路径
+ const baseUrl = "http://www.liulongbin.top:3007";
+ 
+ // 监听注册表单，发送注册请求
+ $("#form_reg").on("submit", (e) => {
+     e.preventDefault();
+     $.ajax({
+         type: "POST",
+         url: baseUrl + "/api/reguser",
+         data: {
+             username: $("#form_reg [name=username").val(),
+             password: $("#form_reg [name=password").val(),
+         },
+         success: (res) => {
+             if (res.status !== 0) return layer.msg(res.message);
+             layer.msg("注册成功！");
+             // 注册成功后跳转到登录界面
+             $("#link_login").click();
+         },
+     });
+ });
