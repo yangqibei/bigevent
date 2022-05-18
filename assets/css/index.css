@@ -3,3 +3,15 @@
     text-align: center;
     font-size: 12px;
   }
+
+
+  
+/* 图标模快 */
+  .iconfont {
+    margin-right: 8px;
+  }
+  
+  .layui-icon {
+    margin-right: 8px;
+    margin-left: 20px;
+  }
