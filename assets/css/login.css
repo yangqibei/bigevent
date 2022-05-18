@@ -1,3 +1,4 @@
+/* -----------body------------ */
 html,
 body {
   margin: 0;
@@ -6,7 +7,9 @@ body {
   height: 100%;
   background: url(/assets/images/login_bg.jpg) no-repeat center center/cover;
 }
+/* -----------body------------ */
 
+/* -----------登录注册区域------------ */
 .loginAndRegBox {
   width: 400px;
   height: 310px;
@@ -16,8 +19,24 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* 登录标题 */
 .loginAndRegBox .title-box {
   height: 60px;
   background: url(/assets/images/login_title.png) no-repeat center;
 }
+
+/* 注册按钮 */
+.reg-box {
+    display: none;
+  }
+/* 登录表单美化 */
+  .layui-form {
+    padding: 0 30px;
+  }
+/* “去注册页面” 按钮美化 */
+  .link {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+/* -----------登录注册区域------------ */
